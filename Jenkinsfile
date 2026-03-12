@@ -20,7 +20,7 @@ pipeline {
         stage('build image') {
             steps {
                 sh '''
-                docker build -t TU_USUARIO/app-ci-cd:latest .
+                docker build -t josemiguellealroman/app-ci-cd:latest .
                 '''
             }
         }
@@ -28,8 +28,8 @@ pipeline {
         stage('dockerhub') {
             steps {
                 sh '''
-                docker login -u TU_USUARIO -p TU_PASSWORD
-                docker push TU_USUARIO/app-ci-cd:latest
+                docker login -u josemiguellealroman -p Madafaca1617
+                docker push josemiguellealroman/app-ci-cd:latest
                 '''
             }
         }
