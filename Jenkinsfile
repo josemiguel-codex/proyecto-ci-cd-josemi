@@ -12,7 +12,7 @@ pipeline {
             steps {
                 sh '''
                 pip3 install flask pytest --break-system-packages
-                pytest
+                pytest3 -m pytest
                 '''
             }
         }
