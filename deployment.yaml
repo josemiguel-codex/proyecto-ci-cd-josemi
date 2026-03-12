@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: app-ci-cd-deployment
+  name: python-app
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: app-ci-cd
+      app: python-app
   template:
     metadata:
       labels:
-        app: app-ci-cd
+        app: python-app
     spec:
       containers:
-      - name: app
-        image: TU_USUARIO/app-ci-cd:latest
+      - name: python-app
+        image: josemiguellealroman/python-app:latest
         ports:
         - containerPort: 5000

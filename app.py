@@ -2,9 +2,9 @@ from flask import Flask
 
 app = Flask(__name__)
 
-@app.route('/')
-def hello_world():
-    return 'Servidor desplegado correctamente en Kubernetes!'
+@app.route("/")
+def home():
+    return "Servidor desplegado correctamente en Kubernetes!"
 
 if __name__ == "__main__":
-    app.run(debug=True, host='0.0.0.0')
+    app.run(host="0.0.0.0", port=5000)
